@@ -5,5 +5,8 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
+  decimal = binary_array[7] + (binary_array[6] * 2) + (binary_array[5] * 4) + (binary_array[4] * 8) + (binary_array[3] * 16) + (binary_array[2] * 32) + (binary_array[1] * 64) + (binary_array[0] * 128)
+
+  return decimal
   raise NotImplementedError
 end
