@@ -5,5 +5,12 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
-  raise NotImplementedError
+  digits = binary_array.length
+  decimal = 0
+  digits.times do |i|
+    dec = binary_array[-1]*(2**i)
+    decimal += dec
+    binary_array.delete_at(-1)
+  end
+  return decimal
 end
