@@ -6,13 +6,13 @@
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
   #raise NotImplementedError
-  binary_array_reverse = binary_array.reverse
 
-  decimal_num = 0
-  binary_array.each_index do |index|
-    decimal_num +=  binary_array_reverse[index] * (2 ** index)
+
+  decimal_number = 0
+  binary_array.length.times do |i|
+    decimal_number +=  (binary_array[binary_array.length - 1 - i]) * (2 ** i)
 
   end
-  return decimal_num
+  return decimal_number
 
 end
