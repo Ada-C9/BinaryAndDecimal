@@ -17,5 +17,6 @@ def binary_to_decimal(binary_array)
     bit_value -= 1
     index+=1
   end
-  return total
+  #convert to float (decimal) type.
+  return total.to_f
 end
