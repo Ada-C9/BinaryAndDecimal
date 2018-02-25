@@ -1,6 +1,12 @@
+# gem 'minitest', '>= 5.0.0'
+require 'minitest/pride'
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/binary_to_decimal'
+
+# Minitest::Reporters.use!
+# Minitest::Reporters::SpecReporter.new
+
 
 describe "binary to decimal" do
   it "From 10011001 to 153" do
