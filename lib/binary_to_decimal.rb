@@ -1,3 +1,8 @@
+# Kirsten schumy
+# Ada Cohort 9
+# CS Fundamentals, Week 3 HW
+# Due 2/26/18
+
 # Returns the decimal equivalent of provided binary_array.
 #
 # @param  binary_array  collection of 0's and 1's representing a binary number
