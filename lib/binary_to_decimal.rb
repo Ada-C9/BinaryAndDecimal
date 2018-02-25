@@ -1,4 +1,4 @@
-# Kirsten schumy
+# Kirsten Schumy
 # Ada Cohort 9
 # CS Fundamentals, Week 3 HW
 # Due 2/26/18
