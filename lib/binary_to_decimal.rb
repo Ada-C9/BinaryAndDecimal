@@ -5,14 +5,40 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 
-binary_array = []
-
-8.times do
-  binary_array << rand(0..1)
-end
 
 def binary_to_decimal(binary_array)
+  decimal = 0
+
+  8.times do |num|
+    decimal += binary_array[-(num+1)] * 2 ** num
+  end
+
+  return decimal
   raise NotImplementedError
 end
 
-puts binary_array
+# # Main block written on one line
+# def binary_to_decimal(binary_array)
+#   decimal = 0
+#
+#   8.times { |num| decimal += binary_array[-(num+1)] * 2 ** num }
+#
+#   return decimal
+#   raise NotImplementedError
+# end
+#
+# # Every variable written out
+# def binary_to_decimal(binary_array)
+#   decimal = 0
+#
+#   8.times do |num|
+#
+#     digit = binary_array[-(num+1)]
+#     multiplier = 2 ** num
+#
+#     decimal += digit * multiplier
+#   end
+#
+#   return decimal
+#   raise NotImplementedError
+# end
