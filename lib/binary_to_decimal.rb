@@ -4,6 +4,21 @@
 # The least significant bit is at index 7.
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
+
+require 'awesome_print'
+require 'pry'
+
 def binary_to_decimal(binary_array)
-  raise NotImplementedError
+  indices = []
+  (0..binary_array.length - 1).each do |i|
+    reverse_index = (binary_array.length - 1) - i
+    indices << reverse_index
+  end
+
+  total = 0
+  (0..binary_array.length - 1).each do |i|
+    value = binary_array[i] * (2 ** indices[i])
+    total += value
+  end
+  return total
 end
