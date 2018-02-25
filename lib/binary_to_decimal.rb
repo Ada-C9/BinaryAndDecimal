@@ -4,6 +4,25 @@
 # The least significant bit is at index 7.
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
+
+
+binary_array = Array.new(8) { rand(0..1)}
+
+# this method will take in the array of 8 bits randomly created
+# and output the decimal value.
 def binary_to_decimal(binary_array)
-  raise NotImplementedError
+  # raise NotImplementedError
+  i = 0
+  expected_decimal = []
+  binary_array.reverse.each do |index|
+    expected_decimal << index * 2 ** i
+    i += 1
+  end
+  return expected_decimal.inject(:+)
 end
+
+
+# UI to test the above code
+# binary_array = Array.new [11000011]
+# expected_decimal = binary_array.join.to_s.to_i(2)
+# puts expected_decimal
