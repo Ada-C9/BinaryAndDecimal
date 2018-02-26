@@ -5,5 +5,22 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
-  raise NotImplementedError
+    length = binary_array.length
+    exponent = 0
+    index = -1
+    total = 0
+
+    length.times do
+      total += array[index] * (2 ** exponent)
+      index -= 1
+      exponent += 1
+    end
+    total
+  end
+
+
+  puts binary_to_decimal([0, 0, 0, 0, 1, 0, 1, 1])
+  puts binary_to_decimal([0, 0, 1, 1, 1, 1, 1, 1])
+  puts binary_to_decimal([1, 0, 1, 0, 0, 1, 1, 1])
+
 end
