@@ -7,3 +7,11 @@
 def binary_to_decimal(binary_array)
   raise NotImplementedError
 end
+def binary_to_decimal(binary_array)
+decimal_value = 0
+n = (binary_array.length) - 1
+binary_array.map{ |digit|
+  decimal_value += digit * (2 ** n)
+  n -= 1}
+  return decimal_value
+end
