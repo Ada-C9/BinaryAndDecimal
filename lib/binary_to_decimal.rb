@@ -5,5 +5,13 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
-  raise NotImplementedError
+  decimal_value = 0
+  # Note: The input array has to be reversed in order for the
+  # algorithm I devised in class to work.
+  binary_array.reverse!
+  binary_array.each_with_index do |bit, index|
+    bit_value = bit * (2 ** index)
+    decimal_value = decimal_value + bit_value
+  end
+  return decimal_value
 end

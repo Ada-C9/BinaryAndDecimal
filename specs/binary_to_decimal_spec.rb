@@ -2,6 +2,12 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/binary_to_decimal'
 
+# Edited this to allow use of mintest reporters.  Made no other
+# edits. 
+
+Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
+
+
 describe "binary to decimal" do
   it "From 10011001 to 153" do
     binary_array = [1, 0, 0, 1, 1, 0, 0, 1]
