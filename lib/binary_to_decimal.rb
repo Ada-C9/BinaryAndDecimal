@@ -10,14 +10,13 @@ require 'minitest/reporters'
 
 #Create method named binary_to_decimal to return decimal value. input is binary array.
 
-binary = []
-8.times do
-  binary << rand(0..1)
-end
+# binary = []
+# 8.times do
+#   binary << rand(0..1)
+# end
 
 def binary_to_decimal(binary_array)
   subtotals = []
-  p binary_array
 
   binary_array.length.times do |i|
     subtotals << binary_array[i] * ((2) ** ((binary_array.length - 1) - i))
@@ -25,9 +24,5 @@ def binary_to_decimal(binary_array)
 
   decimal_number = 0
   subtotals.each { |subtotal| decimal_number += subtotal }
-  # p decimal_number
-  # return decimal_number
+  return decimal_number
 end
-
-decimal_number = binary_to_decimal(binary)
-return decimal_number
