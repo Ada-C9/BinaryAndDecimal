@@ -17,3 +17,15 @@ def binary_to_decimal(binary_array)
   end
   return sum
 end
+
+#improved verision:
+def binary_to_decimal(binary_array)
+  sum = 0
+  8.times do |index|
+    if binary_array[index] == 1
+      sum += (2 ** (7 - index))
+    end
+  end
+  return sum
+end
+
